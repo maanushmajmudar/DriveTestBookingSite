@@ -1,0 +1,24 @@
+<!-- Navigation -->
+<nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn">☰</label>
+    <label class="logo"><a href="/home">Book DriveTest</a></label>
+    <ul>
+        <li><a href="/home">Dashboard</a></li>
+        <% if (locals.user && user.checkUser==="Driver" ) { %>
+        <li><a href="/g2">G2 Test</a></li>
+        <li><a href="/g">G Test</a></li>
+        <% } %> <% if (locals.user && user.checkUser==="Admin" ) { %>
+        <li><a href="/appointment">Appointment</a></li>
+        <li><a href="/user/all">Driver List</a></li>
+        <% } %> <% if (locals.user && user.checkUser==="Examiner" ) { %>
+        <li><a href="/examiner">Examiner</a></li>
+        <% } %> <% if (!locals.user || !user.checkUser ) { %>
+        <li><a href="/landing_page">Login/Signup</a></li>
+
+        <% } %> <% if (locals.user && user.checkUser ) { %>
+        <li><a href="/auth/logout">Logout</a></li>
+
+        <% } %>
+    </ul>
+</nav>

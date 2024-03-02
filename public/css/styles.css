@@ -1,0 +1,959 @@
+/* header css start  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  padding: 10px 45px 20px 45px;
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 30px;
+
+  text-shadow: 2px 2px 10px #afafc0;
+}
+
+label a {
+  color: white;
+}
+
+label a:hover {
+  background: none;
+}
+
+nav {
+  background: #6c757d;
+  height: 80px;
+  width: 100%;
+}
+
+nav ul {
+  float: right;
+  /* margin-right:  160px; */
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 30px;
+}
+
+nav ul li a:hover {
+  background: #9b9d9e;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.mainimg {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainimg h1 {
+  margin: 0;
+  font-size: 3em;
+  padding-bottom: 350px;
+
+  text-shadow: 2px 2px 10px #afafc0;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  text-size-adjust: 50px;
+}
+
+.mainimg h1 a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.mainimg h1 a:hover {
+  text-shadow: 0px 0px 10px rgb(20, 70, 20);
+}
+
+/* header css end  */
+
+/* footer css start  */
+
+.copy {
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 130px;
+}
+
+.footer {
+  background-color: #6c757d;
+  padding: 70px 0;
+  text-align: center;
+}
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 30px;
+  padding-inline: 100px 0px;
+}
+
+/* .footer-col {
+  /* width: 33.33%; */
+/* padding: 0px 30px; */
+
+.footer-col h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col ul {
+  padding-left: 0px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  display: block;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: black;
+  padding-left: 8px;
+  background: none;
+}
+
+.footer-col .social-links a {
+  height: 20px;
+  /* width: 40px;  */
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  color: black;
+  transition: all 0.5s ease;
+}
+.social-links img {
+  vertical-align: unset;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: black;
+}
+
+/* footer css end  */
+
+/* responsive css start*/
+@media (max-width: 1002px) {
+  /* header start  */
+
+  nav ul {
+    margin-right: 0px;
+  }
+
+  /* header end  */
+}
+
+@media (max-width: 1021px) {
+  /* header start  */
+
+  nav ul {
+    margin-right: 0px;
+  }
+
+  /* header end  */
+}
+
+@media (max-width: 952px) {
+  /* header start  */
+
+  label.logo {
+    font-size: 25px;
+    padding-left: 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  /* header end  */
+}
+
+@media (max-width: 858px) {
+  /* header start  */
+  .checkbtn {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 1;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .mainimg {
+    background-size: cover;
+    opacity: 1;
+    height: 40em;
+    display: block;
+  }
+
+  .mainimg h1 {
+    padding-top: 100px;
+    font-size: 2em;
+  }
+}
+
+/* header end  */
+
+@media (max-width: 767px) {
+  /* footer start  */
+  .footer-wrapper {
+    padding-inline: 20px;
+  }
+  /* .footer-col {
+    /* width: 50%;
+        margin-bottom: 30px; */
+}
+
+/* footer end  */
+/*responsive css ends*/
+
+/*newly added css start*/
+header.masterhead {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.relativeposition {
+  position: relative !important;
+}
+
+.padding1 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.padding2 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.gx4 {
+  --bs-gutter-x: 1.5rem;
+}
+.gxlg5 {
+  --bs-gutter-x: 3rem;
+}
+.justifycontentcenter {
+  justify-content: center !important;
+}
+.columncss1 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+.columncss2 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+.columncss3 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+.siteheading {
+  color: #fff;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  text-align: center;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+/* newly added css end*/
+
+h2 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* Login page css*/
+/* .loginpagecontainer {
+  /* justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-left: 500px;
+    margin-top: 20px; */
+
+.loginform {
+  width: 300px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.login-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formgroup {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #053f6e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #053f6e;
+}
+
+/*Landing page css*/
+
+button[type="submit_login"] {
+  width: 40%;
+  padding: 10px;
+  margin-left: 80px;
+  background-color: #053f6e;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit_login"]:hover {
+  background-color: #032e4e;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  button[type="submit_login"] {
+    width: 80%;
+    margin-left: 45px;
+  }
+}
+@media (max-width: 1021px) {
+  button[type="submit_login"] {
+    width: 80%;
+    margin-left: 45px;
+  }
+}
+
+/* Responsive CSS for Login page */
+
+/* @media (max-width: 767px) {
+  .loginpagecontainer {
+    margin-left: 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .loginpagecontainer {
+    margin-top: 10px;
+    margin-left: 90px;
+  }
+
+  .loginformm {
+    width: 90%;
+    padding: 15px;
+  }
+} */
+@media screen and (max-width: 768px) {
+  .loginpagecontainer {
+    margin-left: 0;
+    margin-top: 10px;
+    padding: 15px;
+  }
+
+  .loginform {
+    width: 100%;
+  }
+
+  .login-form h1 {
+    margin-bottom: 15px;
+  }
+
+  .formgroup {
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    padding: 8px;
+  }
+}
+/*login page css ends */
+
+/* G_Page CSS */
+
+main {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+.extramargins {
+  margin-top: 20px;
+}
+
+.gform {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.formgroup {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #053f6e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #053f6e;
+}
+
+.tabledata {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  /* margin-left: 160px; */
+}
+
+.tabledata th,
+.tabledata td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabledata th {
+  background-color: #f5f5f5;
+}
+
+.tabledata td:first-child {
+  font-weight: bold;
+}
+
+/* Form styles */
+.formgroup {
+  margin-bottom: 15px;
+}
+
+.formgroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formgroup input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.formgroup input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.formgroup input:disabled::placeholder {
+  color: #bbb;
+}
+
+.formgroup h5 {
+  margin-top: 10px;
+  font-style: italic;
+  color: #777;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+/* G_Page CSS ends */
+
+/*G2_page css starts*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.g2form {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.formgroup {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="year"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  width: 100%;
+}
+
+/* Add some styling for the disabled slot-button */
+.slot-button[disabled],
+#saveButton[disabled] {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* G2 Page CSS */
+
+/* Dropdown box styles */
+.formgroup {
+  margin-bottom: 20px;
+}
+
+.formgroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formgroup select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Styling the dropdown options */
+.formgroup select::-ms-expand {
+  display: none;
+}
+
+/* Hide the default arrow on IE/Edge browsers */
+
+.formgroup select option {
+  padding: 10px;
+}
+
+/* Styling the selected option */
+.formgroup select option:checked {
+  background-color: #053f6e;
+  color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .formgroup select {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .g2form {
+    padding: 10px;
+  }
+
+  .formgroup {
+    margin-bottom: 15px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    padding: 8px;
+  }
+}
+
+/* G2_Page css ends*/
+
+/*Appoinment page css starts */
+
+/* styles.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+/* Appointment Slots */
+.appointment-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slot-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slot-button:hover {
+  background-color: #45a049;
+}
+.slot-button[disabled] {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+/* Hide the save button by default */
+
+/* Add some styling for the disabled slot-button */
+.slot-button[disabled],
+#saveButton[disabled] {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+/* Hide the save button by default */
+#saveButton {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  background-color: #053f6e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+/* Add your CSS styles here */
+/* Add your CSS styles here */
+#appointmentButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #053f6e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: block; /* Make it a block-level element for centering */
+  margin: 0 auto; /* Center horizontally */
+}
+
+#appointmentButton:hover {
+  background-color: #053f6e;
+}
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .slot-button {
+    padding: 8px 16px;
+    margin: 8px;
+  }
+}
+
+/*Appoinment page css ends*/
+
+/* Custom CSS for styling radio buttons */
+.form-check-input[type="radio"] {
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.form-check-input[type="radio"]:checked + .form-check-label:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+}
+
+/* Styling for the table */
+.table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.table th,
+.table td {
+  border: 1px solid #dee2e6;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+/* Responsive styling for the table on smaller screens */
+@media (max-width: 767px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tbody td {
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+    display: block;
+    text-align: left;
+    padding: 0.25rem;
+  }
+
+  .form-check.form-check-inline {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-check.form-check-inline .form-check-label {
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+    display: inline-block;
+  }
+
+  .form-check.form-check-inline .form-check-input {
+    margin-right: 0.25rem;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <%- include('../public/common/layout_nav') %>
+        <main class="container mt-4">
+            <div class="mb-3">
+                <div class="mt-4">
+                    <label class="form-label">Filter Appoinments by:</label>
+                    <select class="form-select" id="type" name="type" onchange="filterUsers()">
+                        <option value="G">G</option>
+                        <option value="G2">G2</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table" id="table"></table>
+        </main>
+
+        <!-- footer -->
+        <%- include('../public/common/layout_footer') %>
+        <script>
+            function filterUsers() {
+                const filter = document.getElementById("type");
+                const value = filter.value;
+                getUser(value);
+            }
+            async function getUser(value) {
+                const body = {
+                    type: value,
+                };
+                const response = await fetch("http://localhost:4000/examiner/get/user", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: new URLSearchParams(body),
+                });
+                const data = await response.json();
+                let l = document.getElementById("table").rows.length;
+                if (l != 0) {
+                    for (let r = 0; r < l; r++) {
+                        document.getElementById("table").deleteRow(0);
+                    }
+                }
+
+                let table = document.querySelector("table");
+
+                let thead = table.createTHead();
+                let row = thead.insertRow();
+                let th = document.createElement("th");
+                let text = document.createTextNode("Name");
+
+                th.appendChild(text);
+                row.appendChild(th);
+
+                let th2 = document.createElement("th");
+                let text2 = document.createTextNode("Result");
+                th2.appendChild(text2);
+                row.appendChild(th2);
+
+                let th1 = document.createElement("th");
+                let text1 = document.createTextNode("Time");
+                th1.appendChild(text1);
+                row.appendChild(th1);
+
+                for (var i = 0; i < data.user.length; i++) {
+                    let row = table.insertRow();
+
+                    let cell = row.insertCell();
+                    const link = document.createElement("a");
+                    link.href = "http://localhost:4000/get-user-detalis/" + data.user[i]._id;
+                    link.textContent = data.user[i].firstname + " " + data.user[i].lastname;
+                    // let text = document.createTextNode(data.user[i].firstname);
+                    cell.appendChild(link);
+
+                    let c2 = row.insertCell();
+                    c2.appendChild(document.createTextNode(data.user[i].Result));
+
+                    let cell1 = row.insertCell();
+
+                    const body = {
+                        id: data.user[i].appointment_id,
+                    };
+                    const response = await fetch("http://localhost:4000/appointment/get/time", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: new URLSearchParams(body),
+                    });
+                    const data1 = await response.json();
+                    let text1 = document.createTextNode(data1.appoinment.time);
+                    cell1.appendChild(text1);
+                }
+            }
+            window.onload = getUser(null);
+        </script>
+    </body>
+</html>
